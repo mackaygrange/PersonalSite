@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
@@ -29,6 +30,7 @@ export function Header()
 
               {/* LinkedIn Icon + Link */}
               <a
+                data-tooltip-id='TT-Linkedin'
                 href="https://linkedin.com/in/mackay-grange-751941235/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -37,9 +39,16 @@ export function Header()
               >
                 <FaLinkedin size={24} />
               </a>
+              <Tooltip 
+                id="TT-Linkedin"
+                content="Visit my LinkedIn Profile!"
+                place="bottom"
+                className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400"
+              />
 
               {/* Github Icon + Link */}
               <a
+                data-tooltip-id='TT-GithubLink'
                 href="https://github.com/mackaygrange"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,18 +57,32 @@ export function Header()
               >
                 <FaGithub size={24} />
               </a>
+              <Tooltip 
+                id="TT-GithubLink"
+                content="Visit my GitHub Profile!"
+                place="bottom"
+                className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400"
+              />
 
               {/* Email Icon + Link */}
               <a
+                data-tooltip-id='TT-Email'
                 href="mailto:mackay.grange@gmail.com"
                 className="p-2 rounded-lg hover:bg-(--color-highlight-med) transition-colors duration-300"
                 aria-label="Send Email"
               >
                 <FaEnvelope size={24} />
               </a>
+              <Tooltip 
+                id="TT-Email"
+                content="Send me an Email!"
+                place="bottom"
+                className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400"
+              />
 
               {/* Resume Icon + Link */}
               <a
+                data-tooltip-id='TT-Resume'
                 href="public/MackayGrange_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -68,6 +91,13 @@ export function Header()
               >
                 <FaFileAlt size={24} />
               </a>
+
+              <Tooltip 
+                id="TT-Resume"
+                content="View my Resume (PDF)!"
+                place="bottom"
+                className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400"
+              />
             </div>
           </div>
 
