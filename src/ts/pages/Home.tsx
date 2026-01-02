@@ -33,7 +33,7 @@ export function Home()
                         <div className="mt-6 flex justify-center md:justify-center max-w-2xl">
                             <Link
                                 to="/about"
-                                className="rounded-lg px-4 py-2 bg-(--color-muted) shadow-md hover:bg-(--color-subtle) text-white transition-colors duration-800"
+                                className="rounded-lg px-4 py-2 bg-(--color-muted) hover:bg-(--color-subtle) text-white transition-colors duration-800"
                             >
                                 More about me...
                             </Link>
@@ -77,7 +77,7 @@ export function Home()
                 <h2 className="text-3xl font-bold mb-6">Skills</h2>
                 <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
 
-                <div className="flex flex-wrap gap-4 max-w-2xl pb-8" >
+                <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-gold) p-2 bg-(--color-overlay)/80 mb-4" >
                     <IconWithTooltip id="TT-Linux" icon={DiLinux} tooltipText="Linux Operating System" bgColor="bg-(--color-gold)/50" />
                     <IconWithTooltip id="TT-Ubuntu" icon={SiUbuntu} tooltipText="Ubuntu Operating System" bgColor="bg-(--color-gold)/50" />
                     <IconWithTooltip id="TT-ArchLinux" icon={SiArchlinux} tooltipText="Arch Linux Operating System" bgColor="bg-(--color-gold)/50" />
@@ -92,14 +92,14 @@ export function Home()
                     <IconWithTooltip id="TT-Hyprland" icon={SiHyprland} tooltipText="Hyprland Window Manager" bgColor="bg-(--color-gold)/50" />
                 </div>
 
-                <div className="flex flex-wrap gap-4 max-w-2xl pb-8" >
+                <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-love) p-2 bg-(--color-overlay)/80 mb-4" >
                     <IconWithTooltip id="TT-RaspberryPi" icon={DiRasberryPi} tooltipText="Raspberry Pi Single-board Computer" bgColor="bg-(--color-love)/50" />
                     <IconWithTooltip id="TT-Arduino" icon={SiArduino} tooltipText="Arduino Microcontroller Platform" bgColor="bg-(--color-love)/50" />
                     <IconWithTooltip id="TT-Espressif" icon={SiEspressif} tooltipText="Espressif Systems IoT Platform" bgColor="bg-(--color-love)/50" />
                     <IconWithTooltip id="TT-ROS" icon={SiRos} tooltipText="Robot Operating System (ROS/ROS2)" bgColor="bg-(--color-love)/50" />
                 </div>
 
-                <div className="flex flex-wrap gap-4 max-w-2xl pb-8" >
+                <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-pine) p-2 not-last:bg-(--color-overlay)/80 mb-4" >
                     <IconWithTooltip id="TT-React" icon={DiReact} tooltipText="React Framework" bgColor="bg-(--color-pine)/50" />
                     <IconWithTooltip id="TT-Nodejs" icon={DiNodejs} tooltipText="Node.js Runtime Environment" bgColor="bg-(--color-pine)/50"  />
                     <IconWithTooltip id="TT-Npm" icon={DiNpm} tooltipText="Node Package Manager" bgColor="bg-(--color-pine)/50" />
@@ -107,7 +107,7 @@ export function Home()
                     <IconWithTooltip id="TT-CSS3" icon={DiCss3} tooltipText="CSS3 Styling Language" bgColor="bg-(--color-pine)/50" />
                 </div>
 
-                <div className="flex flex-wrap gap-4 max-w-2xl" >
+                <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-iris) p-2 bg-(--color-overlay)/80 mb-4" >
                     <IconWithTooltip id="TT-UML" icon={SiUml} tooltipText="Unified Modeling Language (UML)" bgColor="bg-(--color-iris)/50" />
                     <IconWithTooltip id="TT-Lucid" icon={SiLucid} tooltipText="Lucidchart Diagramming Tool" bgColor="bg-(--color-iris)/50" />
                     <IconWithTooltip id="TT-Figma" icon={SiFigma} tooltipText="Figma Design Tool" bgColor="bg-(--color-iris)/50" />
