@@ -53,7 +53,9 @@ const router = createBrowserRouter([
       </div>
     )
   },
-]);
+], {
+  basename: "/PersonalSite"
+});
 
 function App() {
   return <RouterProvider router={router} />;
