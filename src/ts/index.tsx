@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import '../css/tailwind.css';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
@@ -8,7 +8,7 @@ import { Projects } from './pages/Projects';
 import { Gallery } from './pages/Gallery';
 import { Contact } from './pages/Contact';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { 
     path: "/", 
     element: (
@@ -53,9 +53,7 @@ const router = createBrowserRouter([
       </div>
     )
   },
-], {
-  basename: "/PersonalSite"
-});
+]);
 
 function App() {
   return <RouterProvider router={router} />;
