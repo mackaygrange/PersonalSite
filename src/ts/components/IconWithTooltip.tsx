@@ -9,6 +9,7 @@ interface IconWithTooltipProps
   tooltipText: string;
   size?: number;
   place?: 'top' | 'bottom' | 'left' | 'right';
+  bgColor?: string;
 }
 
 export function IconWithTooltip({
@@ -16,14 +17,14 @@ export function IconWithTooltip({
   icon: Icon, 
   tooltipText, 
   size = 32,
-  place = 'bottom'
+  place = 'bottom', bgColor = "bg-(--color-highlight-med)"
 }: IconWithTooltipProps)
 {
   return (
     <>
       <span 
         data-tooltip-id={id}
-        className="shadow-lg bg-(--color-muted) px-4 py-2 rounded-lg hover:bg-(--color-subtle) transition-colors duration-800"
+        className={`shadow-lg ${bgColor} px-4 py-2 rounded-lg hover:bg-(--color-subtle) transition-colors duration-800`}
       >
         <Icon size={size} />
       </span>
