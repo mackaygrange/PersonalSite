@@ -20,7 +20,7 @@ export function Header()
           <div className="flex items-center justify-between gap-4">
 
             {/* Logo/Name */}
-            <div className="px-2 text-2xl font-bold text-(--color-text)">Mackay Grange</div>
+            <Link to="/" className="px-2 text-2xl font-bold text-(--color-text)">Mackay Grange</Link>
 
             {/* Vertical Divider */}
             <div className="h-6 border-r-2 px-0 py-0 border-(--color-overlay)" aria-hidden="true"></div>
