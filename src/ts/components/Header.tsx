@@ -105,22 +105,22 @@ export function Header()
           <div className="hidden md:flex space-x-8">
 
             {/* Link to About Page */}
-            <Link to="/" className="rounded-lg px-3 py-1 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               About
             </Link>
 
             {/* Link to Projects Page */}
-            <Link to="/projects" className="rounded-lg px-3 py-1 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/projects" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Projects
             </Link>
 
             {/* Link to Gallery Page */}
-            <Link to="/gallery" className="rounded-lg px-3 py-1 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/gallery" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Gallery
             </Link>
 
             {/* Link to Contact Page */}
-            <Link to="/contact" className="rounded-lg px-3 py-1 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/contact" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Contact
             </Link>
           </div>
@@ -128,7 +128,7 @@ export function Header()
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-(--color-text) hover:text-white duration-800 focus:outline-none"
+            className="md:hidden text-(--color-text) px-4 py-1 hover:text-white duration-800 focus:outline-none"
             aria-label="Toggle menu"
           >
             <svg
