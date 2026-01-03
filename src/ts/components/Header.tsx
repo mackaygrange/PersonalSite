@@ -103,9 +103,13 @@ export function Header()
 
           {/* Right Group: Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
+            {/* Link to Home Page */}
+            <Link to="/" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+              Home
+            </Link>
 
             {/* Link to About Page */}
-            <Link to="/" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/about" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               About
             </Link>
 
