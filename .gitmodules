@@ -1,0 +1,3 @@
+[submodule "src/projects/DES_Encryption_Project"]
+	path = src/projects/DES_Encryption_Project
+	url = https://github.com/mackaygrange/DES_Encryption_Project.git
