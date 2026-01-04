@@ -11,7 +11,7 @@ export function Projects()
             <h2 className="text-3xl font-bold mb-6">Projects</h2>
             <div className="flex flex-wrap gap-6">
                 {/* Left Column - Larger Cards (2x width) */}
-                <div className="flex flex-col gap-6 flex-[2] min-w-xs">
+                <div className="flex flex-col gap-6 flex-2 min-w-xs">
                     {/* DES Demo Parent Card */}
                     <div>
                         <ContentCard title="DES Encryption Demo" eyebrow="WebAssembly">

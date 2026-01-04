@@ -62,7 +62,7 @@ export function DESEncryptionCard() {
     return (
       <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay)">
         <h3 className="text-base sm:text-lg font-bold mb-2 text-(--color-text) flex items-center gap-2">
-          <FaLock className="text-(--color-pine) flex-shrink-0" /> Encryption
+          <FaLock className="text-(--color-pine) shrink-0" /> Encryption
         </h3>
         <div className="text-(--color-subtle) animate-pulse">
           Loading WebAssembly module...
@@ -74,7 +74,7 @@ export function DESEncryptionCard() {
   return (
     <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay) overflow-hidden">
       <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-(--color-text) flex items-center gap-2">
-        <FaLock className="text-(--color-pine) flex-shrink-0" /> Encryption
+        <FaLock className="text-(--color-pine) shrink-0" /> Encryption
       </h3>
       <div className="space-y-3 sm:space-y-4">
         {(error || loadError) && (
@@ -136,7 +136,7 @@ export function DESEncryptionCard() {
 
         <div className="text-xs sm:text-sm text-(--color-subtle) p-2 sm:p-3 bg-(--color-base)/50 rounded">
           <span className="flex items-start gap-2">
-            <FaLightbulb className="text-(--color-gold) mt-0.5 flex-shrink-0" />
+            <FaLightbulb className="text-(--color-gold) mt-0.5 shrink-0" />
             <span>Enter an 8-character plaintext and key, then click Encrypt to generate ciphertext using DES compiled to WebAssembly.</span>
           </span>
         </div>
@@ -198,7 +198,7 @@ export function DESDecryptionCard() {
     return (
       <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay)">
         <h3 className="text-base sm:text-lg font-bold mb-2 text-(--color-text) flex items-center gap-2">
-          <FaUnlock className="text-(--color-rose) flex-shrink-0" /> Decryption
+          <FaUnlock className="text-(--color-rose) shrink-0" /> Decryption
         </h3>
         <div className="text-(--color-subtle) animate-pulse">
           Loading WebAssembly module...
@@ -210,7 +210,7 @@ export function DESDecryptionCard() {
   return (
     <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay) overflow-hidden">
       <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-(--color-text) flex items-center gap-2">
-        <FaUnlock className="text-(--color-rose) flex-shrink-0" /> Decryption
+        <FaUnlock className="text-(--color-rose) shrink-0" /> Decryption
       </h3>
       <div className="space-y-3 sm:space-y-4">
         {(error || loadError) && (
@@ -271,7 +271,7 @@ export function DESDecryptionCard() {
 
         <div className="text-xs sm:text-sm text-(--color-subtle) p-2 sm:p-3 bg-(--color-base)/50 rounded">
           <span className="flex items-start gap-2">
-            <FaLightbulb className="text-(--color-gold) mt-0.5 flex-shrink-0" />
+            <FaLightbulb className="text-(--color-gold) mt-0.5 shrink-0" />
             <span>Enter the hex ciphertext and the 8-character key used for encryption, then click Decrypt to recover the original plaintext.</span>
           </span>
         </div>
