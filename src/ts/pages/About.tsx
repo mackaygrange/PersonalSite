@@ -1,6 +1,7 @@
 import React from 'react';
 import { ContentCard } from '../components/ContentCard';
 import diorSticker from '../../assets/images/dior-sticker.png';
+import juniSticker from '../../assets/images/juni-sticker.png';
 
 export function About()
 {
@@ -58,6 +59,11 @@ export function About()
         </ContentCard>
 
         <ContentCard eyebrow="Cats!">
+          <img
+            src={juniSticker}
+            alt="Juni sticker decoration"
+            className="w-64 pointer-events-none"
+          />
           <p className="text-(--color-text) max-w-2xl mb-2">
                         Under Construction!
           </p>
