@@ -13,22 +13,22 @@ interface IconWithTooltipProps
 }
 
 export function IconWithTooltip({
-  id, 
-  icon: Icon, 
-  tooltipText, 
+  id,
+  icon: Icon,
+  tooltipText,
   size = 32,
   place = 'bottom', bgColor = "bg-(--color-highlight-med)"
 }: IconWithTooltipProps)
 {
   return (
     <>
-      <span 
+      <span
         data-tooltip-id={id}
         className={`shadow-lg ${bgColor} px-4 py-2 rounded-lg hover:bg-(--color-subtle) transition-colors duration-800`}
       >
         <Icon size={size} />
       </span>
-      <Tooltip 
+      <Tooltip
         id={id}
         content={tooltipText}
         place={place}

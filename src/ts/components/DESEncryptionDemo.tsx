@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-import { ContentCard } from '../components/ContentCard';
+import { useState } from 'react';
 import { useWasmLoader, getWasmModule } from '../hooks/useWasmLoader';
 import { FaLock, FaUnlock, FaLightbulb } from 'react-icons/fa';
 
@@ -9,7 +8,8 @@ declare global {
   }
 }
 
-export function DESEncryptionCard() {
+export function DESEncryptionCard()
+{
   const [plaintext, setPlaintext] = useState('HELLO123');
   const [key, setKey] = useState('SECRET!!');
   const [ciphertext, setCiphertext] = useState('');
@@ -20,23 +20,28 @@ export function DESEncryptionCard() {
     exportName: 'DESModule',
   });
 
-  const handleEncrypt = () => {
-    if (!wasmReady.current) {
+  const handleEncrypt = () =>
+  {
+    if (!wasmReady.current)
+    {
       setError('WebAssembly not loaded yet');
       return;
     }
 
-    if (plaintext.length !== 8) {
+    if (plaintext.length !== 8)
+    {
       setError('Plaintext must be exactly 8 characters');
       return;
     }
 
-    if (key.length !== 8) {
+    if (key.length !== 8)
+    {
       setError('Key must be exactly 8 characters');
       return;
     }
 
-    try {
+    try
+    {
       const wasmModule = getWasmModule('des');
       const result = wasmModule.ccall(
         'des_encrypt_text',
@@ -45,20 +50,26 @@ export function DESEncryptionCard() {
         [plaintext, key]
       );
 
-      if (result === 'ERROR') {
+      if (result === 'ERROR')
+      {
         setError('Encryption failed');
         setCiphertext('');
-      } else {
+      }
+      else
+      {
         setCiphertext(result);
         setError('');
       }
-    } catch (err) {
+    }
+    catch (err)
+    {
       setError(`Error encrypting: ${err}`);
       setCiphertext('');
     }
   };
 
-  if (loading) {
+  if (loading)
+  {
     return (
       <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay)">
         <h3 className="text-base sm:text-lg font-bold mb-2 text-(--color-text) flex items-center gap-2">
@@ -145,7 +156,8 @@ export function DESEncryptionCard() {
   );
 }
 
-export function DESDecryptionCard() {
+export function DESDecryptionCard()
+{
   const [ciphertext, setCiphertext] = useState('');
   const [key, setKey] = useState('SECRET!!');
   const [plaintext, setPlaintext] = useState('');
@@ -156,23 +168,28 @@ export function DESDecryptionCard() {
     exportName: 'DESModule',
   });
 
-  const handleDecrypt = () => {
-    if (!wasmReady.current) {
+  const handleDecrypt = () =>
+  {
+    if (!wasmReady.current)
+    {
       setError('WebAssembly not loaded yet');
       return;
     }
 
-    if (!ciphertext) {
+    if (!ciphertext)
+    {
       setError('Ciphertext is required');
       return;
     }
 
-    if (key.length !== 8) {
+    if (key.length !== 8)
+    {
       setError('Key must be exactly 8 characters');
       return;
     }
 
-    try {
+    try
+    {
       const wasmModule = getWasmModule('des');
       const result = wasmModule.ccall(
         'des_decrypt_text',
@@ -181,20 +198,26 @@ export function DESDecryptionCard() {
         [ciphertext, key]
       );
 
-      if (result === 'ERROR' || !result) {
+      if (result === 'ERROR' || !result)
+      {
         setError('Decryption failed');
         setPlaintext('');
-      } else {
+      }
+      else
+      {
         setPlaintext(result.replace(/\0/g, ''));
         setError('');
       }
-    } catch (err) {
+    }
+    catch (err)
+    {
       setError(`Error decrypting: ${err}`);
       setPlaintext('');
     }
   };
 
-  if (loading) {
+  if (loading)
+  {
     return (
       <div className="p-3 sm:p-6 bg-(--color-surface) rounded-lg border border-(--color-overlay)">
         <h3 className="text-base sm:text-lg font-bold mb-2 text-(--color-text) flex items-center gap-2">

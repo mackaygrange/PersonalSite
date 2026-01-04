@@ -10,8 +10,8 @@ import { Contact } from './pages/Contact';
 import { About } from './pages/About';
 
 const router = createHashRouter([
-  { 
-    path: "/", 
+  {
+    path: "/",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
@@ -21,8 +21,8 @@ const router = createHashRouter([
       </div>
     )
   },
-  { 
-    path: "/about", 
+  {
+    path: "/about",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
@@ -32,8 +32,8 @@ const router = createHashRouter([
       </div>
     )
   },
-  { 
-    path: "/projects", 
+  {
+    path: "/projects",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
@@ -43,8 +43,8 @@ const router = createHashRouter([
       </div>
     )
   },
-  { 
-    path: "/gallery", 
+  {
+    path: "/gallery",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
@@ -54,8 +54,8 @@ const router = createHashRouter([
       </div>
     )
   },
-  { 
-    path: "/contact", 
+  {
+    path: "/contact",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
@@ -67,7 +67,8 @@ const router = createHashRouter([
   },
 ]);
 
-function App() {
+function App()
+{
   return <RouterProvider router={router} />;
 }
 

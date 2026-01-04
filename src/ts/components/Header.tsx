@@ -39,7 +39,7 @@ export function Header()
               >
                 <FaLinkedin size={24} />
               </a>
-              <Tooltip 
+              <Tooltip
                 id="TT-Linkedin"
                 content="Visit my LinkedIn Profile!"
                 place="bottom"
@@ -57,7 +57,7 @@ export function Header()
               >
                 <FaGithub size={24} />
               </a>
-              <Tooltip 
+              <Tooltip
                 id="TT-GithubLink"
                 content="Visit my GitHub Profile!"
                 place="bottom"
@@ -73,7 +73,7 @@ export function Header()
               >
                 <FaEnvelope size={24} />
               </a>
-              <Tooltip 
+              <Tooltip
                 id="TT-Email"
                 content="Send me an Email!"
                 place="bottom"
@@ -92,7 +92,7 @@ export function Header()
                 <FaFileAlt size={24} />
               </a>
 
-              <Tooltip 
+              <Tooltip
                 id="TT-Resume"
                 content="View my Resume (PDF)!"
                 place="bottom"
