@@ -21,7 +21,7 @@
         --color-highlight-med: #44415a;
         --color-highlight-high: #56526e;
 
-        p { text-indent: 50px; text-align: left;  }
+        p { text-indent: 0px; text-align: left;  }
     }
 
     /*

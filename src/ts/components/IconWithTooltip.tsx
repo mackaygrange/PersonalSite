@@ -13,19 +13,20 @@ interface IconWithTooltipProps
 }
 
 export function IconWithTooltip(
-{
-  id,
-  icon: Icon,
-  tooltipText,
-  size = 32,
-  place = 'bottom', bgColor = "bg-(--color-highlight-med)"
-}: IconWithTooltipProps)
+  {
+    id,
+    icon: Icon,
+    tooltipText,
+    size = 32,
+    place = 'bottom',
+    bgColor = "bg-(--color-muted)"
+  }: IconWithTooltipProps)
 {
   return (
     <>
       <span
         data-tooltip-id={id}
-        className={`shadow-lg ${bgColor} px-4 py-2 rounded-lg hover:bg-(--color-subtle) transition-colors duration-800`}
+        className={`shadow-lg ${bgColor} opacity-80 px-4 py-2 rounded-lg hover:opacity-100 transition-opacity duration-400`}
       >
         <Icon size={size} />
       </span>
@@ -33,7 +34,7 @@ export function IconWithTooltip(
         id={id}
         content={tooltipText}
         place={place}
-        className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400"
+        className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400 z-9999"
       />
     </>
   );

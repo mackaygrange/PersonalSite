@@ -9,7 +9,14 @@ export function Projects()
 {
   return (
     <section id="projects" className="pb-16">
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
+      <h1 className="text-5xl font-bold mb-4 text-(--color-text)">Projects</h1>
+      <h2 className="text-3xl font-semibold mb-4 text-(--color-subtle)">Showcasing Design & Implementation</h2>
+      <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
+      <p className="text-lg text-(--color-text) max-w-2xl mb-2">
+        Below you'll find a selection of projects demonstrating my expertise in systems programming, cryptography, and full-stack web development. 
+        From interactive WebAssembly encryption demos to this portfolio site itself, each project reflects my commitment to clean code, 
+        performance, and user experience. Feel free to explore the source code and see how these applications are built.
+      </p>
       <div className="flex flex-wrap gap-6">
         {/* Left Column - Larger Cards (2x width) */}
         <div className="flex flex-col gap-6 flex-2 min-w-xs">

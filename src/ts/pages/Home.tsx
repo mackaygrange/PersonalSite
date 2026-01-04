@@ -7,7 +7,6 @@ import { IconWithTooltip } from '../components/IconWithTooltip';
 
 import profilePic  from '../../assets/images/PFP.jpg';
 import { Link } from 'react-router-dom';
-import { ContentCard } from '../components/ContentCard';
 
 export function Home()
 {
@@ -22,13 +21,13 @@ export function Home()
             <h1 className="text-5xl font-bold mb-4">Software Engineer</h1>
             <h2 className="text-3xl font-semibold mb-4 text-(--color-subtle)">Mackay Grange | B.S. Software Engineering</h2>
             <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
-            <p className="text-xl text-(--color-text) max-w-2xl pb-0">
-                            Hello, I'm <b>Mackay Grange</b>, a software engineer with a Bachelor of Science in Software Engineering.
-                            I got my degree from <a href="https://www.uvu.edu" target="_blank" rel="noopener noreferrer" className="text-(--color-pine) underline">Utah Valley University</a> in 2025.
-                            I enjoy designing and building reliable, maintainable systems with a strong foundation in computer science principles.
-                            This website serves as a professional portfolio showcasing my projects, technical experience,
-                            and areas of interest—from systems programming and embedded development to full-stack and software design.
-                            I'm always eager to learn, improve, and take on meaningful engineering challenges.
+            <p className="text-lg text-(--color-text) max-w-2xl pb-0">
+              Hello, I'm <b>Mackay Grange</b>, a software engineer with a Bachelor of Science in Software Engineering.
+              I got my degree from <a href="https://www.uvu.edu" target="_blank" rel="noopener noreferrer" className="text-(--color-pine) underline">Utah Valley University</a> in 2025.
+              I enjoy designing and building reliable, maintainable systems with a strong foundation in computer science principles.
+              This website serves as a professional portfolio showcasing my projects, technical experience,
+              and areas of interest—from systems programming and embedded development to full-stack and software design.
+              I'm always eager to learn, improve, and take on meaningful engineering challenges.
             </p>
 
             {/* Link to About Page */}
@@ -37,7 +36,7 @@ export function Home()
                 to="/about"
                 className="rounded-lg px-4 py-2 bg-(--color-muted) hover:bg-(--color-subtle) text-white transition-colors duration-800"
               >
-                                More about me...
+                 More about me...
               </Link>
             </div>
           </section>
@@ -60,33 +59,44 @@ export function Home()
       </div>
 
       {/* Languages Section */}
-      <section id="programming-languages" className="pb-16">
-        <h2 className="text-3xl font-bold mb-6">Programming Languages</h2>
-        <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
-
-        <div className="text-xs sm:text-sm text-(--color-subtle) p-2 sm:p-3 rounded mb-3 max-w-2xl">
-          <span className="flex items-start gap-2 ">
-            <FaLightbulb className="text-(--color-gold) mt-0.5 shrink-0" />
-            <span>Hover or tap an icon if you do not recognize it to see what it represents.</span>
-          </span>
-        </div>
-
-        <div className="flex flex-wrap gap-4 max-w-2xl">
-          <IconWithTooltip id="TT-C" icon={SiC} tooltipText="C Programming Language" />
-          <IconWithTooltip id="TT-CPP" icon={SiCplusplus} tooltipText="C++ Programming Language" />
-          <IconWithTooltip id="TT-Python" icon={DiPython} tooltipText="Python Programming Language" />
-          <IconWithTooltip id="TT-Lua" icon={SiLua} tooltipText="Lua Programming Language" />
-          <IconWithTooltip id="TT-JS" icon={DiJsBadge} tooltipText="JavaScript Programming Language" />
-          <IconWithTooltip id="TT-TS" icon={SiTypescript} tooltipText="TypeScript Programming Language" />
+      <section id="programming-languages" className="pb-8">
+        <div className="my-4 relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur max-w-3xl">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-(--color-rose) via-(--color-foam) to-(--color-pine)/80" />
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <h2 className="text-3xl font-bold text-(--color-text)">Programming Languages</h2>
+            </div>
+            <div className="text-xs sm:text-sm text-(--color-subtle) p-2 sm:p-3 rounded mb-4 bg-(--color-base)/50">
+              <span className="flex items-start gap-2">
+                <FaLightbulb className="text-(--color-gold) mt-0.5 shrink-0" />
+                <span>Hover or tap an icon if you do not recognize it to see what it represents.</span>
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <IconWithTooltip id="TT-C" icon={SiC} tooltipText="C Programming Language" />
+              <IconWithTooltip id="TT-CPP" icon={SiCplusplus} tooltipText="C++ Programming Language" />
+              <IconWithTooltip id="TT-Python" icon={DiPython} tooltipText="Python Programming Language" />
+              <IconWithTooltip id="TT-Lua" icon={SiLua} tooltipText="Lua Programming Language" />
+              <IconWithTooltip id="TT-JS" icon={DiJsBadge} tooltipText="JavaScript Programming Language" />
+              <IconWithTooltip id="TT-TS" icon={SiTypescript} tooltipText="TypeScript Programming Language" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Skills Section */}
       <section id="skills" className="pb-16">
-        <h2 className="text-3xl font-bold mb-6">Skills</h2>
-        <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
-        <div className="flex flex-wrap gap-6 max-w-2xl">
-            <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-gold) p-2 bg-(--color-overlay)/50 mb-4" >
+        <div className="my-4 relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur max-w-3xl">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-(--color-rose) via-(--color-foam) to-(--color-pine)/80" />
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <h2 className="text-3xl font-bold text-(--color-text)">Skills</h2>
+            </div>
+
+            {/* Tools & DevOps */}
+            <div className="mb-6">
+              <p className="text-sm font-semibold text-(--color-gold) mb-3 indent-0">Tools & DevOps</p>
+              <div className="flex flex-wrap gap-4">
                 <IconWithTooltip id="TT-Linux" icon={DiLinux} tooltipText="Linux Operating System" bgColor="bg-(--color-gold)/50" />
                 <IconWithTooltip id="TT-Ubuntu" icon={SiUbuntu} tooltipText="Ubuntu Operating System" bgColor="bg-(--color-gold)/50" />
                 <IconWithTooltip id="TT-ArchLinux" icon={SiArchlinux} tooltipText="Arch Linux Operating System" bgColor="bg-(--color-gold)/50" />
@@ -99,24 +109,36 @@ export function Home()
                 <IconWithTooltip id="TT-SQLite" icon={SiSqlite} tooltipText="PostgreSQL Database" bgColor="bg-(--color-gold)/50" />
                 <IconWithTooltip id="TT-MySQL" icon={DiMysql} tooltipText="MySQL Database" bgColor="bg-(--color-gold)/50" />
                 <IconWithTooltip id="TT-Hyprland" icon={SiHyprland} tooltipText="Hyprland Window Manager" bgColor="bg-(--color-gold)/50" />
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-love) p-2 bg-(--color-overlay)/80 mb-4" >
+            {/* Embedded & IoT */}
+            <div className="mb-6">
+              <p className="text-sm font-semibold text-(--color-love) mb-3 indent-0">Embedded & IoT</p>
+              <div className="flex flex-wrap gap-4">
                 <IconWithTooltip id="TT-RaspberryPi" icon={DiRasberryPi} tooltipText="Raspberry Pi Single-board Computer" bgColor="bg-(--color-love)/50" />
                 <IconWithTooltip id="TT-Arduino" icon={SiArduino} tooltipText="Arduino Microcontroller Platform" bgColor="bg-(--color-love)/50" />
                 <IconWithTooltip id="TT-Espressif" icon={SiEspressif} tooltipText="Espressif Systems IoT Platform" bgColor="bg-(--color-love)/50" />
                 <IconWithTooltip id="TT-ROS" icon={SiRos} tooltipText="Robot Operating System (ROS/ROS2)" bgColor="bg-(--color-love)/50" />
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-pine) p-2 not-last:bg-(--color-overlay)/80 mb-4" >
+            {/* Web Development */}
+            <div className="mb-6">
+              <p className="text-sm font-semibold text-(--color-pine) mb-3 indent-0">Web Development</p>
+              <div className="flex flex-wrap gap-4">
                 <IconWithTooltip id="TT-React" icon={DiReact} tooltipText="React Framework" bgColor="bg-(--color-pine)/50" />
-                <IconWithTooltip id="TT-Nodejs" icon={DiNodejs} tooltipText="Node.js Runtime Environment" bgColor="bg-(--color-pine)/50"  />
+                <IconWithTooltip id="TT-Nodejs" icon={DiNodejs} tooltipText="Node.js Runtime Environment" bgColor="bg-(--color-pine)/50" />
                 <IconWithTooltip id="TT-Npm" icon={DiNpm} tooltipText="Node Package Manager" bgColor="bg-(--color-pine)/50" />
                 <IconWithTooltip id="TT-HTML5" icon={DiHtml5} tooltipText="HTML5 Markup Language" bgColor="bg-(--color-pine)/50" />
                 <IconWithTooltip id="TT-CSS3" icon={DiCss3} tooltipText="CSS3 Styling Language" bgColor="bg-(--color-pine)/50" />
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 max-w-2xl rounded-2xl border-2 border-(--color-iris) p-2 bg-(--color-overlay)/80 mb-4" >
+            {/* Design & Documentation */}
+            <div>
+              <p className="text-sm font-semibold text-(--color-iris) mb-3 indent-0">Design & Documentation</p>
+              <div className="flex flex-wrap gap-4">
                 <IconWithTooltip id="TT-UML" icon={SiUml} tooltipText="Unified Modeling Language (UML)" bgColor="bg-(--color-iris)/50" />
                 <IconWithTooltip id="TT-Lucid" icon={SiLucid} tooltipText="Lucidchart Diagramming Tool" bgColor="bg-(--color-iris)/50" />
                 <IconWithTooltip id="TT-Figma" icon={SiFigma} tooltipText="Figma Design Tool" bgColor="bg-(--color-iris)/50" />
@@ -124,7 +146,9 @@ export function Home()
                 <IconWithTooltip id="TT-GoogleSheets" icon={SiGooglesheets} tooltipText="Google Sheets Spreadsheet Application" bgColor="bg-(--color-iris)/50" />
                 <IconWithTooltip id="TT-Blender" icon={SiBlender} tooltipText="Blender 3D Modeling Software" bgColor="bg-(--color-iris)/50" />
                 <IconWithTooltip id="TT-Gimp" icon={SiGimp} tooltipText="GIMP Image Editor" bgColor="bg-(--color-iris)/50" />
+              </div>
             </div>
+          </div>
         </div>
       </section>
     </section>
