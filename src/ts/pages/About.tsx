@@ -2,6 +2,7 @@ import React from 'react';
 import { ContentCard } from '../components/ContentCard';
 import diorSticker from '../../assets/images/dior-sticker.png';
 import juniSticker from '../../assets/images/juni-sticker.png';
+import restoredPlaneSticker from '../../assets/images/restored-plane-sticker.png';
 
 export function About()
 {
@@ -23,6 +24,11 @@ export function About()
       </p>
       <div className="flex flex-wrap min-w-xs max-w-2xl">
         <ContentCard eyebrow="Woodworking" >
+          <img
+            src={restoredPlaneSticker}
+            alt="Restored plane sticker decoration"
+            className="w-64 pointer-events-none"
+          />
           <p className="text-(--color-text) max-w-2xl mb-2">
                         Under Construction!
           </p>
