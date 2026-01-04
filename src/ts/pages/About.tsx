@@ -1,10 +1,18 @@
 import React from 'react';
 import { ContentCard } from '../components/ContentCard';
+import diorSticker from '../../assets/images/dior-sticker.png';
 
 export function About()
 {
   return (
-    <section id="about" className="pb-16">
+    <>
+      <img
+        src={diorSticker}
+        alt="Dior sticker decoration"
+        className="fixed top-32 md:top-32 right-2 md:right-0 w-16 md:w-64 h-auto z-10 pointer-events-none"
+      />
+
+      <section id="about" className="pb-16">
       <h1 className="text-5xl font-bold mb-4 text-(--color-text)">About Me</h1>
       <h2 className="text-3xl font-semibold mb-4 text-(--color-subtle)">Avid Creator and Collector</h2>
       <div className="border-b-4 border-double border-(--color-overlay) mb-4 max-w-2xl"> </div>
@@ -62,5 +70,6 @@ export function About()
         </ContentCard>
       </div>
     </section>
+    </>
   )
 }
