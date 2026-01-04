@@ -8,7 +8,6 @@ import { RepositoryLink } from '../components/RepositoryLink';
 export function Projects()
 {
   return (
-
     <section id="projects" className="pb-16">
       <h2 className="text-3xl font-bold mb-6">Projects</h2>
       <div className="flex flex-wrap gap-6">
