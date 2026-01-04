@@ -8,10 +8,10 @@ export function Header()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="drop-shadow-lg bg-(--color-base) border-(--color-rose) border-b-2">
+    <header className="sticky top-0 z-50 drop-shadow-lg bg-(--color-base)/80 border-(--color-rose)/80 border-b-2 backdrop-blur">
 
       {/* Navigation Bar */}
-      <nav className="container mx-auto px-4 py-8">
+      <nav className="container mx-auto px-4 py-6">
 
         {/* Container for Navbar Groups */}
         <div className="flex items-center justify-between">
@@ -104,27 +104,27 @@ export function Header()
           {/* Right Group: Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {/* Link to Home Page */}
-            <Link to="/" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Home
             </Link>
 
             {/* Link to About Page */}
-            <Link to="/about" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/about" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               About
             </Link>
 
             {/* Link to Projects Page */}
-            <Link to="/projects" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/projects" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Projects
             </Link>
 
             {/* Link to Gallery Page */}
-            <Link to="/gallery" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/gallery" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Gallery
             </Link>
 
             {/* Link to Contact Page */}
-            <Link to="/contact" className="rounded-lg p-2 bg-(--color-base) hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/contact" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
               Contact
             </Link>
           </div>

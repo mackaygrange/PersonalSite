@@ -12,7 +12,8 @@ interface IconWithTooltipProps
   bgColor?: string;
 }
 
-export function IconWithTooltip({
+export function IconWithTooltip(
+{
   id,
   icon: Icon,
   tooltipText,
