@@ -16,7 +16,7 @@ export function DESEncryptionCard() {
   const [error, setError] = useState('');
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'des',
-    scriptSrc: '/PersonalSite/projects/public/des_demo.js',
+    scriptSrc: '/PersonalSite/wasm/des_demo.js',
     exportName: 'DESModule',
   });
 
@@ -152,7 +152,7 @@ export function DESDecryptionCard() {
   const [error, setError] = useState('');
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'des',
-    scriptSrc: '/PersonalSite/projects/public/des_demo.js',
+    scriptSrc: '/PersonalSite/wasm/des_demo.js',
     exportName: 'DESModule',
   });
 
