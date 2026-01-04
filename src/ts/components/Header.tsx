@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import resumePdf from '../../public/MackayGrange_Resume.pdf';
 
 export function Header()
 {
@@ -83,7 +84,7 @@ export function Header()
               {/* Resume Icon + Link */}
               <a
                 data-tooltip-id='TT-Resume'
-                href="public/MackayGrange_Resume.pdf"
+                href={resumePdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg hover:bg-(--color-highlight-med) transition-colors duration-300"
