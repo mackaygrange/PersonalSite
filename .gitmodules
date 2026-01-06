@@ -4,3 +4,7 @@
 [submodule "src/projects/RSA_Encryption_Project"]
 	path = src/projects/RSA_Encryption_Project
 	url = https://github.com/mackaygrange/RSA_Encryption_Project.git
+[submodule "src/projects/cs4380-emulator-assembler"]
+	path = src/projects/cs4380-emulator-assembler
+	url = https://github.com/mackaygrange/cs4380-emulator-assembler.git
+
