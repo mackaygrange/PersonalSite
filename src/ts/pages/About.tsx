@@ -22,6 +22,7 @@ export function About()
                 Hello! I'm Mackay Grange, a passionate software developer and technology enthusiast. I love creating innovative solutions and exploring new technologies.
                 When I'm not coding, you can find me picking up new hobbies with reckless abandon. It's hard to find time for all of them, but luckily I tend to cycle between them every few months.
       </p>
+      {/* 
       <div className="flex flex-wrap min-w-xs max-w-2xl">
         <ContentCard eyebrow="Woodworking" >
           <img
@@ -81,6 +82,7 @@ export function About()
           </p>
         </ContentCard>
       </div>
+      */}
     </section>
     </>
   )

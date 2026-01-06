@@ -12,10 +12,13 @@ export function Capstone()
 
   // Project images - add these paths as images become available
   const projectImages: ProjectImage[] = [
-    { src: '/PersonalSite/assets/images/capstone/tug-main.jpg', alt: 'Electric Tug Prototype' },
-    { src: '/PersonalSite/assets/images/capstone/assembly-1.jpg', alt: 'Tug Assembly and Components' },
-    { src: '/PersonalSite/assets/images/capstone/control-systems.jpg', alt: 'Onboard Control Systems' },
-    { src: '/PersonalSite/assets/images/capstone/testing.jpg', alt: 'Testing and Validation' },
+    { src: '/PersonalSite/assets/images/capstone/tug.jpeg', alt: 'Electric Tug Prototype' },
+    { src: '/PersonalSite/assets/images/capstone/team.jpeg', alt: 'Tug Project Team' },
+    { src: '/PersonalSite/assets/images/capstone/testing-software.jpeg', alt: 'Testing Onboard Control Systems' },
+    { src: '/PersonalSite/assets/images/capstone/testing.jpeg', alt: 'Testing and Validation' },
+    { src: '/PersonalSite/assets/images/capstone/attach.jpeg', alt: 'Attach Mechanism' },
+    { src: '/PersonalSite/assets/images/capstone/plane.jpeg', alt: 'Hooked up to Aircraft' },
+
   ];
 
   const nextImage = () =>
@@ -62,7 +65,7 @@ export function Capstone()
         <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Project Gallery</h2>
         <div className="space-y-4">
           {/* Image Display */}
-          <div className="relative bg-(--color-base) rounded-lg border border-(--color-overlay) overflow-hidden h-96 flex items-center justify-center">
+          <div className="relative bg-(--color-base) rounded-lg border border-(--color-overlay) overflow-hidden h-[50vh] flex items-center justify-center">
             <img
               src={projectImages[currentImageIndex].src}
               alt={projectImages[currentImageIndex].alt}
