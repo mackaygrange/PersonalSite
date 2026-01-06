@@ -364,7 +364,7 @@ export function RSAKeyGenerationCard()
         </h3>
         <button
           onClick={handleUseSuggested}
-          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-iris)/50 bg-(--color-iris)/10 text-(--color-iris) hover:bg-(--color-iris)/30 transition-colors duration-300"
+          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-iris)/50 bg-(--color-iris)/10 text-(--color-iris) hover:bg-(--color-iris)/30 transition-all duration-300 hover:scale-98"
         >
           Use Random Primes
         </button>
@@ -420,7 +420,7 @@ export function RSAKeyGenerationCard()
         <button
           onClick={handleCalculate}
           disabled={!wasmReady.current}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-iris) hover:bg-(--color-iris)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-colors font-semibold"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-iris) hover:bg-(--color-iris)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-all duration-400 hover:scale-98 active:scale-95 font-semibold"
         >
           Generate Key Pairs
         </button>
@@ -608,7 +608,7 @@ export function RSAEncryptionCard()
         </h3>
         <button
           onClick={handleFillFromGenerator}
-          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-pine)/50 bg-(--color-pine)/10 text-(--color-pine) hover:bg-(--color-pine)/30 transition-colors duration-300"
+          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-pine)/50 bg-(--color-pine)/10 text-(--color-pine) hover:bg-(--color-pine)/30 transition-all duration-300 hover:scale-98"
         >
           Fill from Generator
         </button>
@@ -661,7 +661,7 @@ export function RSAEncryptionCard()
                   setInputFormat(format);
                   setM('');
                 }}
-                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-colors ${
+                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-all duration-400 hover:scale-98 ${
                   inputFormat === format
                     ? 'bg-(--color-foam) text-white'
                     : 'bg-(--color-muted) text-(--color-text) hover:bg-(--color-overlay)'
@@ -698,7 +698,7 @@ export function RSAEncryptionCard()
               <button
                 key={format}
                 onClick={() => setOutputFormat(format)}
-                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-colors ${
+                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-all duration-400 hover:scale-98 ${
                   outputFormat === format
                     ? 'bg-(--color-pine) text-white'
                     : 'bg-(--color-muted) text-(--color-text) hover:bg-(--color-overlay)'
@@ -713,7 +713,7 @@ export function RSAEncryptionCard()
         <button
           onClick={handleEncrypt}
           disabled={!wasmReady.current}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-pine) hover:bg-(--color-pine)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-colors font-semibold"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-pine) hover:bg-(--color-pine)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-all duration-400 hover:scale-98 active:scale-95 font-semibold"
         >
           Encrypt
         </button>
@@ -876,7 +876,7 @@ export function RSADecryptionCard()
         </h3>
         <button
           onClick={handleFillFromGenerator}
-          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-rose)/50 bg-(--color-rose)/10 text-(--color-rose) hover:bg-(--color-rose)/30 transition-colors duration-300"
+          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded border border-(--color-rose)/50 bg-(--color-rose)/10 text-(--color-rose) hover:bg-(--color-rose)/30 transition-all duration-300 hover:scale-98"
         >
           Fill from Generator
         </button>
@@ -929,7 +929,7 @@ export function RSADecryptionCard()
                   setInputFormat(format);
                   setC('');
                 }}
-                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-colors ${
+                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-all duration-400 hover:scale-98 ${
                   inputFormat === format
                     ? 'bg-(--color-foam) text-white'
                     : 'bg-(--color-muted) text-(--color-text) hover:bg-(--color-overlay)'
@@ -963,7 +963,7 @@ export function RSADecryptionCard()
               <button
                 key={format}
                 onClick={() => setOutputFormat(format)}
-                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-colors ${
+                className={`flex-1 px-2 py-1.5 rounded text-xs sm:text-xs font-semibold transition-all duration-400 hover:scale-98 ${
                   outputFormat === format
                     ? 'bg-(--color-rose) text-white'
                     : 'bg-(--color-muted) text-(--color-text) hover:bg-(--color-overlay)'
@@ -978,7 +978,7 @@ export function RSADecryptionCard()
         <button
           onClick={handleDecrypt}
           disabled={!wasmReady.current || !c || !d || !n}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-rose) hover:bg-(--color-rose)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-colors font-semibold"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-rose) hover:bg-(--color-rose)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-all duration-400 hover:scale-98 active:scale-95 font-semibold"
         >
           Decrypt
         </button>

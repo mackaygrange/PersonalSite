@@ -131,7 +131,7 @@ export function DESEncryptionCard()
         <button
           onClick={handleEncrypt}
           disabled={!wasmReady.current || plaintext.length !== 8 || key.length !== 8}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-pine) hover:bg-(--color-pine)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded transition-colors font-semibold text-sm sm:text-base"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-pine) hover:bg-(--color-pine)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 font-semibold text-sm sm:text-base"
         >
           Encrypt
         </button>
@@ -278,7 +278,7 @@ export function DESDecryptionCard()
         <button
           onClick={handleDecrypt}
           disabled={!wasmReady.current || !ciphertext || key.length !== 8}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-rose) hover:bg-(--color-rose)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-colors font-semibold"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-(--color-rose) hover:bg-(--color-rose)/80 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm sm:text-base rounded transition-all duration-400 hover:scale-98 active:scale-95 font-semibold"
         >
           Decrypt
         </button>
