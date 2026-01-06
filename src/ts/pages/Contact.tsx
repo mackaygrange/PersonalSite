@@ -110,9 +110,9 @@ export function Contact()
             Download my resume to learn more about my education, experience, and technical qualifications.
           </p>
           <a
-            href="/MackayGrange_Resume.pdf"
-            download
-            className="inline-block px-6 py-3 bg-(--color-iris)/80 hover:bg-(--color-iris) text-white font-semibold rounded-lg transition-colors duration-400"
+            href="/PersonalSite/MackayGrange_Resume.pdf"
+            download="MackayGrange_Resume.pdf"
+            className="inline-block px-6 py-3 bg-(--color-iris)/80 hover:bg-(--color-iris) text-white font-semibold rounded-lg transition-all duration-400 hover:scale-98 active:scale-95"
           >
             Download Resume (PDF)
           </a>

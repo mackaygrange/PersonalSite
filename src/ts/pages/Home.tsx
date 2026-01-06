@@ -34,7 +34,7 @@ export function Home()
             <div className="mt-6 flex justify-center md:justify-center max-w-2xl">
               <Link
                 to="/about"
-                className="rounded-lg px-4 py-2 bg-(--color-muted) hover:bg-(--color-subtle) text-white transition-colors duration-800"
+                className="rounded-lg px-4 py-2 bg-(--color-muted) hover:bg-(--color-subtle) text-white transition-all duration-400 hover:scale-98 active:scale-95"
               >
                  More about me...
               </Link>

@@ -175,6 +175,12 @@ export function Capstone()
               Lithium battery packs with intelligent charging systems and real-time consumption monitoring. Autonomous return-to-base when battery threshold reached.
             </p>
           </div>
+          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+            <h3 className="font-bold text-(--color-gold) mb-2">Software & Middleware</h3>
+            <p className="text-sm text-(--color-subtle)">
+              ROS2 Jazzy Jalisco provides the foundational robotics middleware for node communication, sensor data processing, and autonomous navigation algorithms across the heterogeneous hardware platforms.
+            </p>
+          </div>
         </div>
       </div>
 
