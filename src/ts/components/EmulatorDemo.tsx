@@ -183,8 +183,6 @@ export function EmulatorDemo()
         const cycles = module.ccall('get_total_cycles', 'number', [], []);
         const lastInstrCycles = module.ccall('get_last_instruction_cycles', 'number', [], []);
         
-        console.log('Cycle values:', { cycles });
-        
         setTotalCycles(cycles || 0);
       }
       catch (e)
