@@ -4,7 +4,7 @@ A modern, interactive personal portfolio website showcasing computer science pro
 
 ![React](https://img.shields.io/badge/React-19-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1-38B2AC) ![Vite](https://img.shields.io/badge/Vite-7.3-purple) ![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-E34F26)
 
-## 🎯 Overview
+## Overview
 
 This portfolio website provides interactive demonstrations of advanced computer science concepts through live, in-browser applications powered by WebAssembly. Visitors can:
 
@@ -13,9 +13,9 @@ This portfolio website provides interactive demonstrations of advanced computer 
 - **View detailed execution metrics** including memory cycles, PC values, and instruction disassembly
 - **Step through instructions** one-by-one or run programs at full speed
 
-## ✨ Key Features
+## Key Features
 
-### 🖥️ CS4380 CPU Emulator
+### CS4380 CPU Emulator
 - **Interactive Emulator Demo**: Load and execute assembly programs in the browser
 - **Real-time Visualization**: Watch the program counter, instruction, and memory cycles update as code executes
 - **Multiple Test Programs**: Pre-loaded programs including Fibonacci calculator and comprehensive test suites
@@ -26,19 +26,19 @@ This portfolio website provides interactive demonstrations of advanced computer 
 - **Memory Cycle Tracking**: Accurate cycle counting accounting for cache operations
 - **Debug Console**: Dual-mode output (regular and debug) with syntax highlighting
 
-### 🔐 Cryptography Demos
+### Cryptography Demos
 - **RSA Encryption**: Asymmetric encryption demonstration with key generation and message encryption/decryption
 - **DES Encryption**: Symmetric encryption showcase with block cipher operations
 - Both implement full encryption pipelines compiled from C++ to WebAssembly
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - Responsive design with gradient animations and smooth transitions
 - Animated tech tags with gradient fill effects
 - Interactive buttons with scale and hover effects (400ms transitions)
 - Syntax-highlighted console output with color-coded debugging information
 - Modular component architecture for easy extension
 
-## 📋 Technology Stack
+## Technology Stack
 
 **Frontend:**
 - React 19 - UI framework
@@ -58,7 +58,7 @@ This portfolio website provides interactive demonstrations of advanced computer 
 - ESLint 9 - Code linting
 - TypeScript ESLint - Type-aware linting
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 16+ and npm
@@ -116,7 +116,7 @@ Output will be generated in the `dist/` directory.
 npm run preview
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PersonalSite/
@@ -174,7 +174,7 @@ PersonalSite/
 └── package.json              # Project dependencies
 ```
 
-## 🎮 Usage Guide
+## Usage Guide
 
 ### CS4380 Emulator Demo
 
@@ -198,7 +198,7 @@ PersonalSite/
 3. **For DES**: Enter a key and encrypt/decrypt your message
 4. View results with detailed operation metrics
 
-## 🔧 Development
+## Development
 
 ### Code Style
 
@@ -223,7 +223,7 @@ Each C++ project has its own build script:
 
 These scripts compile C++ to WebAssembly using Emscripten and output JavaScript loader files to `src/public/wasm/`.
 
-## 🔄 Performance Optimization
+## Performance Optimization
 
 ### Display Throttling
 - Emulator UI updates throttled to 100ms intervals during animated execution
@@ -235,7 +235,7 @@ These scripts compile C++ to WebAssembly using Emscripten and output JavaScript 
 - Accounts for cache hit/miss timing
 - Resets properly on program load and reset
 
-## 📚 Educational Value
+## Educational Value
 
 This portfolio demonstrates:
 
@@ -245,7 +245,7 @@ This portfolio demonstrates:
 - **Web Technologies**: React, TypeScript, WebAssembly integration
 - **Software Engineering**: Modular design, performance optimization, user experience
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### WASM Modules Not Loading
 - Ensure WASM files are built: Run `build_wasm.bat` in each project folder
@@ -261,18 +261,18 @@ This portfolio demonstrates:
 - Toggle "Debug" mode in emulator controls
 - Check browser console for any JavaScript errors
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to:
 - Report bugs
 - Suggest new features
 - Submit pull requests
 
-## 📧 Contact
+## Contact
 
 - **GitHub**: [mackaygrange](https://github.com/mackaygrange)
 - **Project Repositories**:
@@ -280,7 +280,7 @@ Contributions are welcome! Please feel free to:
   - [RSA Encryption Project](https://github.com/mackaygrange/RSA_Encryption_Project)
   - [DES Encryption Project](https://github.com/mackaygrange/DES_Encryption_Project)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - CS4380 CPU Architecture course materials
 - Emscripten documentation and community
