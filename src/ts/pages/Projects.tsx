@@ -21,6 +21,7 @@ export function Projects()
       <div className="flex flex-wrap gap-6">
         {/* Left Column - Larger Cards (2x width) */}
         <div className="flex flex-col gap-6 flex-2 min-w-xs">
+
           {/* CS4380 Emulator/Assembler Demo */}
           <div>
             <ContentCard
@@ -34,7 +35,7 @@ export function Projects()
                 assembler, demonstrating low-level systems programming concepts in the browser.
               </p>
               <EmulatorDemo />
-              <div className="flex flex-wrap gap-2 pt-6">
+              <div className="flex flex-wrap gap-2 pt-6 justify-center">
                 <TechTag name="C++" />
                 <TechTag name="Wasm" />
                 <TechTag name="React" />
@@ -55,7 +56,7 @@ export function Projects()
                 <DESEncryptionCard />
                 <DESDecryptionCard />
               </div>
-              <div className="flex flex-wrap gap-2 pt-6">
+              <div className="flex flex-wrap gap-2 pt-6 justify-center">
                 <TechTag name="React" />
                 <TechTag name="TypeScript" />
                 <TechTag name="C++" />
@@ -80,7 +81,7 @@ export function Projects()
                 <RSADecryptionCard />
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-6">
+              <div className="flex flex-wrap gap-2 pt-6 justify-center">
                 <TechTag name="React" />
                 <TechTag name="TypeScript" />
                 <TechTag name="C++" />
@@ -101,7 +102,7 @@ export function Projects()
               actions={<RepositoryLink url="https://github.com/mackaygrange/PersonalSite" label="View Source Code" />}
             >
               <p className="mb-6">You're looking at it!</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 <TechTag name="React" />
                 <TechTag name="TypeScript" />
                 <TechTag name="TailwindCSS" />
@@ -118,7 +119,7 @@ export function Projects()
               actions={<RepositoryLink url="https://github.com/mackaygrange/dotfiles" label="View Repository" />}
             >
               <p className="mb-6">My personal Linux configuration files including Neovim setup, shell configurations, and window manager settings. A reflection of my development environment and workflow preferences.</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 <TechTag name="Linux" />
                 <TechTag name="Neovim" />
                 <TechTag name="Bash" />

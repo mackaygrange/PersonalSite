@@ -1,6 +1,6 @@
 # PersonalSite - Interactive CS Projects Portfolio
 
-A modern, interactive personal portfolio website showcasing computer science projects with embedded WebAssembly demonstrations. Built with React, TypeScript, and Tailwind CSS, featuring live emulator and cryptography demos.
+A modern, interactive personal portfolio website showcasing computer science and engineering projects. Built with React, TypeScript, and Tailwind CSS, featuring live emulator, cryptography demos, and documentation of advanced hardware control systems.
 
 ![React](https://img.shields.io/badge/React-19-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1-38B2AC) ![Vite](https://img.shields.io/badge/Vite-7.3-purple) ![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-E34F26)
 
@@ -37,6 +37,14 @@ This portfolio website provides interactive demonstrations of advanced computer 
 - Interactive buttons with scale and hover effects (400ms transitions)
 - Syntax-highlighted console output with color-coded debugging information
 - Modular component architecture for easy extension
+
+### Senior Capstone Project - Electric Tug System
+- **Project Overview**: Autonomous electric tug vehicle developed in collaboration with Rocky Mountain Power and Provo International Airport
+- **Hardware Integration**: Control systems for DC motors, stepper motors, servos, and solenoids
+- **Autonomous Capabilities**: Navigation and operational autonomy systems
+- **Control Architecture**: Onboard microcontroller systems for coordinated motor control
+- **Project Documentation**: Comprehensive photo gallery and technical documentation
+- **Repository Status**: Private repository required by project stakeholders
 
 ## Technology Stack
 
@@ -158,9 +166,13 @@ PersonalSite/
 │   │   ├── RSA_Encryption_Project/       # RSA implementation
 │   │   │   ├── src/
 │   │   │   └── rsa_wrapper.cpp
-│   │   └── DES_Encryption_Project/       # DES implementation
-│   │       ├── src/
-│   │       └── des_wrapper.cpp
+│   │   ├── DES_Encryption_Project/       # DES implementation
+│   │   │   ├── src/
+│   │   │   └── des_wrapper.cpp
+│   │   ├── ElectricTugCapstone/          # Senior capstone project
+│   │   │   ├── documentation/             # Technical documentation
+│   │   │   ├── images/                    # Project photos and diagrams
+│   │   │   └── README.md                  # Capstone project details
 │   └── public/
 │       └── wasm/                          # Compiled WASM modules
 │           ├── emu4380_demo.js
@@ -197,6 +209,14 @@ PersonalSite/
 2. **For RSA**: Generate keys, then encrypt/decrypt your message
 3. **For DES**: Enter a key and encrypt/decrypt your message
 4. View results with detailed operation metrics
+
+### Capstone Project Gallery
+
+1. **Project Overview**: View comprehensive documentation of the electric tug system
+2. **Photo Gallery**: Explore high-quality images of the prototype, components, and assembly
+3. **Technical Details**: Learn about the control architecture and component specifications
+4. **Project Information**: Understand the collaboration with Rocky Mountain Power and Provo International Airport
+5. **Repository Access**: Note that the source repository is private per project requirements
 
 ## Development
 
@@ -244,6 +264,9 @@ This portfolio demonstrates:
 - **Cryptography**: RSA public-key and DES symmetric encryption implementations
 - **Web Technologies**: React, TypeScript, WebAssembly integration
 - **Software Engineering**: Modular design, performance optimization, user experience
+- **Hardware Control Systems**: Embedded systems design for autonomous vehicle applications
+- **Systems Integration**: Coordinating multiple motor types and actuators in a complex system
+- **Industrial Collaboration**: Practical engineering in partnership with real-world stakeholders
 
 ## Troubleshooting
 

@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
 export function Header()
 {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path ? 'border-b-2 border-(--color-pine)' : '';
+  };
 
   return (
     <header className="sticky top-0 z-50 drop-shadow-lg bg-(--color-base)/80 border-(--color-rose)/80 border-b-2 backdrop-blur">
@@ -104,27 +109,27 @@ export function Header()
           {/* Right Group: Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {/* Link to Home Page */}
-            <Link to="/" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/')}`}>
               Home
             </Link>
 
             {/* Link to About Page */}
-            <Link to="/about" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/about" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about')}`}>
               About
             </Link>
 
             {/* Link to Projects Page */}
-            <Link to="/projects" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/projects" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects')}`}>
               Projects
             </Link>
 
-            {/* Link to Gallery Page */}
-            <Link to="/gallery" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
-              Gallery
+            {/* Link to Capstone Page */}
+            <Link to="/capstone" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone')}`}>
+              Capstone
             </Link>
 
             {/* Link to Contact Page */}
-            <Link to="/contact" className="rounded-lg p-2 hover:bg-(--color-highlight-med) text-white transition-colors duration-800">
+            <Link to="/contact" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact')}`}>
               Contact
             </Link>
           </div>
@@ -157,10 +162,19 @@ export function Header()
         {isMenuOpen && (
           <div className="text-center md:hidden mt-4 space-y-2 pb-2">
 
-            {/* Mobile About Link */}
+            {/* Mobile Home Link */}
             <Link
               to="/"
-              className="block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800"
+              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            {/* Mobile About Link */}
+            <Link
+              to="/about"
+              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -169,27 +183,27 @@ export function Header()
             {/* Mobile Projects Link */}
             <Link
               to="/projects"
-              className="block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800"
+              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
 
             >
               Projects
             </Link>
 
-            {/* Mobile Skills Link */}
+            {/* Mobile Capstone Link */}
             <Link
-              to="/gallery"
-              className="block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800"
+              to="/capstone"
+              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
 
             >
-              Gallery
+              Capstone
             </Link>
 
             {/* Mobile Contact Link */}
             <Link
               to="/contact"
-              className="block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800"
+              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

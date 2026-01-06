@@ -53,43 +53,45 @@ export function EmulatorDemo()
   const [showInputDialog, setShowInputDialog] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [pausedForInput, setPausedForInput] = useState(false);
-  const [selectedProgram, setSelectedProgram] = useState('Program_A');
+  const [selectedProgram, setSelectedProgram] = useState('');
   const [debugMode, setDebugMode] = useState(false);
   const [totalCycles, setTotalCycles] = useState(0);
   const fastFinishRef = useRef(false);
+  const initializeRef = useRef(false);
 
   // Helper to get the appropriate console output based on debug mode
   const consoleOutput = debugMode ? consoleOutputDebug : consoleOutputRegular;
 
-  // Initialize emulator on mount
+  // Initialize emulator when WASM is ready
   useEffect(() =>
   {
-    if (loading || loadError || !wasmReady.current) return;
+    if (loading || loadError) return;
+    if (initializeRef.current) return;
+
+    // Check if the module is available
+    const module = getWasmModule('emulator');
+    if (!module) return;
 
     try
     {
-      const module = getWasmModule('emulator');
-      if (!module) return;
-
+      initializeRef.current = true;
       // Initialize with 128KB memory
       const result = module.ccall('init_emulator', 'number', ['number'], [131072]);
-      if (result === 1)
+      if (result !== 1)
       {
-        setExecutionOutput(['Emulator initialized successfully']);
-        updateRegisterDisplay();
-      }
-      else
-      {
-        setError('Failed to initialize emulator');
+        initializeRef.current = false;
       }
     }
     catch (err)
     {
-      const errorMsg = err instanceof Error ? err.message : String(err);
-      setError(`Initialization error: ${errorMsg}`);
       console.error('Initialization error:', err);
+      initializeRef.current = false;
     }
-  }, [loading, loadError, wasmReady.current]);
+
+    return () => {
+      initializeRef.current = false;
+    };
+  }, [loading, loadError]);
 
   // Helper to add syntax highlighting to console output
   const highlightConsoleLine = (line: string) => {
@@ -158,22 +160,30 @@ export function EmulatorDemo()
       setCurrentPC(pc);
 
       // Get current instruction
-      const instrPtr = module.ccall('get_current_instruction', 'number', [], []);
-      if (instrPtr !== 0)
+      try
       {
-        const instrStr = module.UTF8ToString(instrPtr);
-        if (instrStr && instrStr.length > 0)
+        const instrPtr = module.ccall('get_current_instruction', 'number', [], []);
+        if (instrPtr !== 0)
         {
-          setCurrentInstruction(instrStr);
+          const instrStr = module.UTF8ToString(instrPtr);
+          if (instrStr && instrStr.length > 0)
+          {
+            setCurrentInstruction(instrStr);
+          }
+          else
+          {
+            setCurrentInstruction('N/A');
+          }
+          module.ccall('free_memory', null, ['number'], [instrPtr]);
         }
         else
         {
           setCurrentInstruction('N/A');
         }
-        module.ccall('free_memory', null, ['number'], [instrPtr]);
       }
-      else
+      catch (instrErr)
       {
+        console.error('Error getting instruction:', instrErr);
         setCurrentInstruction('N/A');
       }
 
@@ -192,18 +202,25 @@ export function EmulatorDemo()
       }
 
       // Get console output
-      const consolePtr = module.ccall('get_console_output', 'string', [], []);
-      if (consolePtr && consolePtr.length > 0)
+      try
       {
-        const lines = consolePtr.split('\n').filter((line: string) => line.trim().length > 0);
-        // Always add to debug version
-        setConsoleOutputDebug(prev => [...prev, ...lines]);
-        // Add filtered version to regular
-        const filteredLines = filterDebugOutput(lines);
-        if (filteredLines.length > 0)
+        const consolePtr = module.ccall('get_console_output', 'string', [], []);
+        if (consolePtr && consolePtr.length > 0)
         {
-          setConsoleOutputRegular(prev => [...prev, ...filteredLines]);
+          const lines = consolePtr.split('\n').filter((line: string) => line.trim().length > 0);
+          // Always add to debug version
+          setConsoleOutputDebug(prev => [...prev, ...lines]);
+          // Add filtered version to regular
+          const filteredLines = filterDebugOutput(lines);
+          if (filteredLines.length > 0)
+          {
+            setConsoleOutputRegular(prev => [...prev, ...filteredLines]);
+          }
         }
+      }
+      catch (consoleErr)
+      {
+        console.error('Error getting console output:', consoleErr);
       }
     }
     catch (err)
@@ -633,6 +650,7 @@ export function EmulatorDemo()
               }}
               className="w-full px-3 py-2 bg-(--color-base) border border-(--color-overlay) rounded text-(--color-text) focus:outline-none focus:border-(--color-gold) cursor-pointer"
             >
+              <option value="" disabled>Select Program...</option>
               <option value="Program_A">Program A - Fibonacci</option>
               <option value="Program_B">Program B</option>
               <option value="Program_C">Program C</option>
@@ -646,7 +664,7 @@ export function EmulatorDemo()
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => loadExampleProgram()}
-            disabled={programLoaded}
+            disabled={programLoaded || !selectedProgram}
             className="px-4 py-2 bg-(--color-pine)/80 hover:bg-(--color-pine) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95"
           >
             Load Program

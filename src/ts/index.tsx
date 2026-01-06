@@ -5,7 +5,7 @@ import '../css/tailwind.css';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
-import { Gallery } from './pages/Gallery';
+import { Capstone } from './pages/Capstone';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
 
@@ -44,12 +44,12 @@ const router = createHashRouter([
     )
   },
   {
-    path: "/gallery",
+    path: "/capstone",
     element: (
       <div className="min-h-screen bg-linear-to-b from-(--color-surface) to-(--color-base) text-(--color-text)">
         <Header />
         <main className="container mx-auto px-6 pt-10">
-          <Gallery />
+          <Capstone />
         </main>
       </div>
     )

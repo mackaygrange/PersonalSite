@@ -34,6 +34,7 @@ export function useWasmLoader({ moduleName, scriptSrc, exportName }: UseWasmLoad
     {
       wasmReady.current = true;
       setLoading(false);
+      setError(''); // Clear any previous errors
       return;
     }
 
