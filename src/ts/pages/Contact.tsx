@@ -34,7 +34,7 @@ export function Contact()
                   rel="noopener noreferrer"
                   className="text-(--color-gold) underline hover:text-(--color-rose) transition-colors"
                 >
-                  mackay-grange-751941235
+                  mackay-grange
                 </a>
               </div>
               <Tooltip
