@@ -12,10 +12,10 @@ export function CapstoneProject()
 
   // Project images - add these paths as images become available
   const projectImages: ProjectImage[] = [
-    { src: '/PersonalSite/assets/images/capstone/tug-main.jpg', alt: 'Electric Tug Prototype' },
-    { src: '/PersonalSite/assets/images/capstone/assembly-1.jpg', alt: 'Tug Assembly and Components' },
-    { src: '/PersonalSite/assets/images/capstone/control-systems.jpg', alt: 'Onboard Control Systems' },
-    { src: '/PersonalSite/assets/images/capstone/testing.jpg', alt: 'Testing and Validation' },
+    { src: '/assets/images/capstone/tug-main.jpg', alt: 'Electric Tug Prototype' },
+    { src: '/assets/images/capstone/assembly-1.jpg', alt: 'Tug Assembly and Components' },
+    { src: '/assets/images/capstone/control-systems.jpg', alt: 'Onboard Control Systems' },
+    { src: '/assets/images/capstone/testing.jpg', alt: 'Testing and Validation' },
   ];
 
   const nextImage = () =>

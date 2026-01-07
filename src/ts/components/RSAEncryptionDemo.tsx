@@ -254,7 +254,7 @@ export function RSAKeyGenerationCard()
 
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'rsa',
-    scriptSrc: '/PersonalSite/wasm/rsa_demo.js',
+    scriptSrc: '/wasm/rsa_demo.js',
     exportName: 'RSAModule',
   });
 
@@ -476,7 +476,7 @@ export function RSAEncryptionCard()
   const [outputFormat, setOutputFormat] = useState<'string' | 'decimal' | 'hex' | 'binary'>('string');
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'rsa',
-    scriptSrc: '/PersonalSite/wasm/rsa_demo.js',
+    scriptSrc: '/wasm/rsa_demo.js',
     exportName: 'RSAModule',
   });
 
@@ -753,7 +753,7 @@ export function RSADecryptionCard()
   const [outputFormat, setOutputFormat] = useState<'string' | 'decimal' | 'hex' | 'binary'>('string');
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'rsa',
-    scriptSrc: '/PersonalSite/wasm/rsa_demo.js',
+    scriptSrc: '/wasm/rsa_demo.js',
     exportName: 'RSAModule',
   });
 

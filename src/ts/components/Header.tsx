@@ -88,7 +88,7 @@ export function Header()
               {/* Resume Icon + Link */}
               <a
                 data-tooltip-id='TT-Resume'
-                href="/PersonalSite/MackayGrange_Resume.pdf"
+                href="/MackayGrange_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg hover:bg-(--color-highlight-med) transition-colors duration-300"

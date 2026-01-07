@@ -52,7 +52,7 @@ export function EmulatorDemo()
 {
   const { loading, error: loadError, wasmReady } = useWasmLoader({
     moduleName: 'emulator',
-    scriptSrc: '/PersonalSite/wasm/emu4380_demo.js',
+    scriptSrc: '/wasm/emu4380_demo.js',
     exportName: 'EmulatorModule',
   });
   const [registers, setRegisters] = useState<RegisterState>({});
@@ -262,7 +262,7 @@ export function EmulatorDemo()
     try
     {
       // Fetch the selected program binary
-      const response = await fetch(`/PersonalSite/wasm/${program}.bin`);
+      const response = await fetch(`/wasm/${program}.bin`);
       if (!response.ok)
       {
         setError(`Failed to load binary for ${program}`);
