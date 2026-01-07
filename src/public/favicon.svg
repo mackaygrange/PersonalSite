@@ -1,24 +1,23 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Dark background -->
-  <rect width="200" height="200" fill="#232136"/>
+  <!-- Transparent background -->
   
   <!-- Gradient definition -->
   <defs>
     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f6c177;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#ea9a97;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#c4a7e7;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Subtle border circle -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="#3e8fb0" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#3e8fb0" stroke-width="2" opacity="0.5"/>
   
   <!-- Inner circle with gradient -->
-  <circle cx="100" cy="100" r="85" fill="url(#goldGradient)" opacity="0.15"/>
+  <circle cx="100" cy="100" r="85" fill="url(#goldGradient)" opacity="0.12"/>
   
-  <!-- MG initials in bold sans-serif -->
-  <text x="100" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="700" fill="#f6c177" text-anchor="middle" letter-spacing="-2">MG</text>
+  <!-- MG initials in rose color - condensed and tall, shifted up slightly -->
+  <text x="100" y="87.5" font-family="system-ui, -apple-system, sans-serif" font-size="120" font-weight="800" fill="#ea9a97" text-anchor="middle" dominant-baseline="central" letter-spacing="2" transform="translate(0, 0) scale(0.85, 1.5)" transform-origin="100 87.5" style="font-stretch: condensed;">MG</text>
   
-  <!-- Accent dot for visual interest -->
-  <circle cx="160" cy="60" r="4" fill="#9ccfd8" opacity="0.7"/>
+  <!-- Accent dot in gold - positioned with 10px padding from top and right -->
+  <circle cx="180" cy="20" r="10" fill="#f6c177" opacity="0.9"/>
 </svg>
