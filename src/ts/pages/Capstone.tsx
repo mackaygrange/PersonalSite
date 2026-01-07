@@ -1,5 +1,14 @@
+import diorSticker from '../../assets/images/dior-sticker.png';
+
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaLock } from 'react-icons/fa';
+
+import tugImage from '../../assets/images/capstone/tug.jpeg';
+import teamImage from '../../assets/images/capstone/team.jpeg';
+import testingSoftwareImage from '../../assets/images/capstone/testing-software.jpeg';
+import testingImage from '../../assets/images/capstone/testing.jpeg';
+import attachImage from '../../assets/images/capstone/attach.jpeg';
+import planeImage from '../../assets/images/capstone/plane.jpeg';
 
 interface ProjectImage {
   src: string;
@@ -12,12 +21,12 @@ export function Capstone()
 
   // Project images - add these paths as images become available
   const projectImages: ProjectImage[] = [
-    { src: '/PersonalSite/assets/images/capstone/tug.jpeg', alt: 'Electric Tug Prototype' },
-    { src: '/PersonalSite/assets/images/capstone/team.jpeg', alt: 'Tug Project Team' },
-    { src: '/PersonalSite/assets/images/capstone/testing-software.jpeg', alt: 'Testing Onboard Control Systems' },
-    { src: '/PersonalSite/assets/images/capstone/testing.jpeg', alt: 'Testing and Validation' },
-    { src: '/PersonalSite/assets/images/capstone/attach.jpeg', alt: 'Attach Mechanism' },
-    { src: '/PersonalSite/assets/images/capstone/plane.jpeg', alt: 'Hooked up to Aircraft' },
+    { src: tugImage, alt: 'Electric Tug Prototype' },
+    { src: teamImage, alt: 'Tug Project Team' },
+    { src: testingSoftwareImage, alt: 'Testing Onboard Control Systems' },
+    { src: testingImage, alt: 'Testing and Validation' },
+    { src: attachImage, alt: 'Attach Mechanism' },
+    { src: planeImage, alt: 'Hooked up to Aircraft' },
 
   ];
 

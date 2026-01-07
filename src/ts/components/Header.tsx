@@ -9,7 +9,7 @@ export function Header()
   const location = useLocation();
 
   const isActive = (path: string) => {
-    return location.pathname === path ? 'border-b-2 border-(--color-pine)' : '';
+    return location.pathname === path ? 'border-b-2 border-(--color-subtle)' : '';
   };
 
   return (
@@ -165,7 +165,7 @@ export function Header()
             {/* Mobile Home Link */}
             <Link
               to="/"
-              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
@@ -174,7 +174,7 @@ export function Header()
             {/* Mobile About Link */}
             <Link
               to="/about"
-              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -183,7 +183,7 @@ export function Header()
             {/* Mobile Projects Link */}
             <Link
               to="/projects"
-              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
 
             >
@@ -193,7 +193,7 @@ export function Header()
             {/* Mobile Capstone Link */}
             <Link
               to="/capstone"
-              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
 
             >
@@ -203,7 +203,7 @@ export function Header()
             {/* Mobile Contact Link */}
             <Link
               to="/contact"
-              className={`block rounded-lg py-1 bg-(--color-base) text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
+              className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

@@ -38,6 +38,14 @@
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
+    scrollbar-gutter: stable;
+  }
+  body {
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+  }
+  #root {
+    scrollbar-gutter: stable;
   }
   hr {
     height: 0;
