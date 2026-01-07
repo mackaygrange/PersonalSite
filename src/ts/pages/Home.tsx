@@ -47,7 +47,7 @@ export function Home()
           <img
             src={profilePic}
             alt="Me and my Beautiful Wife"
-            className="w-96 h-96 rounded-full border-16 border-(--color-highlight-med) object-cover shadow-lg"
+            className="w-96 h-96 rounded-full border-8 border-(--color-highlight-med) object-cover shadow-lg"
           />
         </div>
         <Tooltip

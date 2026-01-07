@@ -26,6 +26,21 @@ const consoleStyles = `
   .console-input[type=number] {
     -moz-appearance: textfield;
   }
+  select {
+    color-scheme: dark;
+  }
+  select option {
+    background: #1a1a1a;
+    color: #e0e0e0;
+  }
+  select option:hover {
+    background: #2d5a3d;
+    color: #e0e0e0;
+  }
+  select option:checked {
+    background: #2a2a2a;
+    color: #e0e0e0;
+  }
 `;
 
 interface RegisterState
@@ -636,8 +651,9 @@ export function EmulatorDemo()
           <FaMicrochip className="text-(--color-pine)" /> Control Panel
         </h3>
         
-        <div className="flex flex-col sm:flex-row gap-3 items-end sm:items-center">
-          <div className="flex-1 w-full sm:w-auto">
+        {/* Program Selection and Debug Toggle */}
+        <div className="mb-4 flex flex-col gap-3">
+          <div className="w-full">
             <label className="block text-sm font-(--color-gold) mb-2">Select Program</label>
             <select
               value={selectedProgram}
@@ -660,11 +676,11 @@ export function EmulatorDemo()
           </div>
         </div>
         
-        <div className="flex flex-wrap gap-2 items-center">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => loadExampleProgram()}
             disabled={programLoaded || !selectedProgram}
-            className="px-3 sm:px-4 py-2 bg-(--color-pine)/80 hover:bg-(--color-pine) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 text-sm sm:text-base"
+            className="px-4 py-2 bg-(--color-pine)/80 hover:bg-(--color-pine) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95"
           >
             Load Program
           </button>
@@ -672,33 +688,33 @@ export function EmulatorDemo()
           <button
             onClick={stepInstruction}
             disabled={!programLoaded || isRunning || programHalted}
-            className="px-3 sm:px-4 py-2 bg-(--color-gold)/80 hover:bg-(--color-gold) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+            className="px-4 py-2 bg-(--color-gold)/80 hover:bg-(--color-gold) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2"
           >
-            <FaStepForward className="shrink-0" /> <span className="hidden sm:inline">Step</span>
+            <FaStepForward /> Step
           </button>
           
           <button
             onClick={runProgram}
             disabled={!programLoaded || isRunning || programHalted}
-            className="px-3 sm:px-4 py-2 bg-(--color-iris)/80 hover:bg-(--color-iris) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+            className="px-4 py-2 bg-(--color-iris)/80 hover:bg-(--color-iris) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2"
           >
-            <FaPlay className="shrink-0" /> <span className="hidden sm:inline">Run</span>
+            <FaPlay /> Run
           </button>
           
           <button
             onClick={() => fastFinishRef.current = true}
             disabled={!programLoaded || !isRunning || programHalted}
-            className="px-3 sm:px-4 py-2 bg-(--color-gold)/80 hover:bg-(--color-gold) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+            className="px-4 py-2 bg-(--color-gold)/80 hover:bg-(--color-gold) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2"
           >
-            <FaFastForward className="shrink-0" /> <span className="hidden sm:inline">Finish</span>
+            <FaFastForward /> Finish
           </button>
           
           <button
             onClick={resetEmulator}
             disabled={!programLoaded || isRunning}
-            className="px-3 sm:px-4 py-2 bg-(--color-rose)/80 hover:bg-(--color-rose) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+            className="px-4 py-2 bg-(--color-rose)/80 hover:bg-(--color-rose) disabled:bg-(--color-overlay) disabled:cursor-not-allowed text-white rounded transition-all duration-400 hover:scale-98 active:scale-95 flex items-center gap-2"
           >
-            <FaRedo className="shrink-0" /> <span className="hidden sm:inline">Reset</span>
+            <FaRedo /> Reset
           </button>
           
           <div className="flex items-center gap-2 ml-auto">
@@ -714,7 +730,7 @@ export function EmulatorDemo()
               <div className="absolute left-1 top-1 w-4 h-4 bg-(--color-overlay) rounded-full peer-checked:translate-x-5 transition-transform"></div>
             </label>
             <span className="text-xs text-(--color-subtle) flex items-center gap-1">
-              <FaBug /> <span className="hidden sm:inline">Debug</span>
+              <FaBug /> Debug
             </span>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { ContentCard } from '../components/ContentCard';
 import diorSticker from '../../assets/images/dior-sticker.png';
 import juniSticker from '../../assets/images/juni-sticker.png';
 import restoredPlaneSticker from '../../assets/images/restored-plane-sticker.png';
+import { Tooltip } from 'react-tooltip';
 
 export function About()
 {
@@ -11,7 +12,15 @@ export function About()
       <img
         src={diorSticker}
         alt="Dior sticker decoration"
-        className="fixed top-32 md:top-32 right-2 md:right-0 w-16 md:w-64 h-auto z-10 pointer-events-none"
+        className="fixed top-32 md:top-32 right-2 md:right-0 w-16 md:w-64 h-auto z-10"
+        data-tooltip-id='dior-tt'
+      />
+
+      <Tooltip
+        id="dior-tt"
+        content="One of my four cats, Dior!"
+        place="left"
+        className="bg-(--color-overlay) text-(--color-text) px-2 py-1 rounded text-sm delay-400 z-9999"
       />
 
       <section id="about" className="pb-16">
