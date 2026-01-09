@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaLock } from 'react-icons/fa';
+import tugImage from '../../assets/images/capstone/tug.jpeg';
+import testingSoftwareImage from '../../assets/images/capstone/testing-software.jpeg';
+import attachImage from '../../assets/images/capstone/attach.jpeg';
+import testingImage from '../../assets/images/capstone/testing.jpeg';
 
 interface ProjectImage {
   src: string;
@@ -12,10 +16,10 @@ export function CapstoneProject()
 
   // Project images - add these paths as images become available
   const projectImages: ProjectImage[] = [
-    { src: '/assets/images/capstone/tug-main.jpg', alt: 'Electric Tug Prototype' },
-    { src: '/assets/images/capstone/assembly-1.jpg', alt: 'Tug Assembly and Components' },
-    { src: '/assets/images/capstone/control-systems.jpg', alt: 'Onboard Control Systems' },
-    { src: '/assets/images/capstone/testing.jpg', alt: 'Testing and Validation' },
+    { src: tugImage, alt: 'Electric Tug Prototype' },
+    { src: attachImage, alt: 'Tug Assembly and Components' },
+    { src: testingSoftwareImage, alt: 'Onboard Control Systems' },
+    { src: testingImage, alt: 'Testing and Validation' },
   ];
 
   const nextImage = () =>
