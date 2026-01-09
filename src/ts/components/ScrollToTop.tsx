@@ -4,7 +4,10 @@ export function ScrollToTop()
 {
   useEffect(() => {
     const handleHashChange = () => {
-      window.scrollTo(0, 0);
+      // Use setTimeout to ensure the scroll happens after route change
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }, 0);
     };
 
     window.addEventListener('hashchange', handleHashChange);
