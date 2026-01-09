@@ -1,7 +1,7 @@
 import diorSticker from '../../assets/images/dior-sticker.png';
 
 import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight, FaLock } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaLock, FaHandshake, FaBolt, FaMicrochip, FaGraduationCap } from 'react-icons/fa';
 
 import tugImage from '../../assets/images/capstone/tug.jpeg';
 import teamImage from '../../assets/images/capstone/team.jpeg';
@@ -9,6 +9,11 @@ import testingSoftwareImage from '../../assets/images/capstone/testing-software.
 import testingImage from '../../assets/images/capstone/testing.jpeg';
 import attachImage from '../../assets/images/capstone/attach.jpeg';
 import planeImage from '../../assets/images/capstone/plane.jpeg';
+import gutsImage from '../../assets/images/capstone/guts.jpeg';
+import skeletonImage from '../../assets/images/capstone/skeleton.jpeg';
+import tugShowImage from '../../assets/images/capstone/tug-show.jpeg';
+import tugShowFrontImage from '../../assets/images/capstone/tug-show-front.jpeg';
+import engineeringShowPosterImage from '../../assets/images/capstone/engineering-show-poster.jpeg';
 
 interface ProjectImage {
   src: string;
@@ -27,7 +32,11 @@ export function Capstone()
     { src: testingImage, alt: 'Testing and Validation' },
     { src: attachImage, alt: 'Attach Mechanism' },
     { src: planeImage, alt: 'Hooked up to Aircraft' },
-
+    { src: gutsImage, alt: 'Internal Components that we inherited from last years team with no documentation and had to reverse engineer :D' },
+    { src: skeletonImage, alt: 'Chassis Skeleton during development stages' },
+    { src: tugShowImage, alt: 'Tug Vehicle on Display' },
+    { src: tugShowFrontImage, alt: 'Front View of Tug Vehicle on Display' },
+    { src: engineeringShowPosterImage, alt: 'Engineering Show Poster' },
   ];
 
   const nextImage = () =>
@@ -42,24 +51,135 @@ export function Capstone()
 
   return (
     <div className="space-y-8 max-w-5xl">
-      {/* Project Header */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
-        <h1 className="text-5xl font-bold mb-4 text-(--color-text)">
+      {/* Project Header & Sponsors */}
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-(--color-rose) via-(--color-foam) to-(--color-pine)/80" />
+        <h1 className="text-5xl font-bold mb-2 text-(--color-text)">
           Autonomous Electric Tug Vehicle System
         </h1>
         <p className="text-xl text-(--color-subtle) mb-6">
           Senior Capstone Project in collaboration with Rocky Mountain Power and Provo International Airport
         </p>
-        <div className="flex items-center gap-3 bg-(--color-base) p-4 rounded border border-(--color-overlay)">
+        <div className="flex items-center gap-3 bg-(--color-surface) p-4 rounded border border-(--color-overlay) mb-8">
           <FaLock className="text-(--color-gold) shrink-0" />
           <span className="text-sm text-(--color-subtle)">
             Repository is private per project requirements and stakeholder agreements
           </span>
         </div>
+
+        <div className="border-t border-(--color-overlay) pt-8">
+          <h2 className="text-center text-lg font-semibold text-(--color-subtle) mb-8 flex items-center justify-center gap-2">
+            <FaHandshake className="text-(--color-gold)" />
+            Developed in partnership with:
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
+            {/* Rocky Mountain Power */}
+            <a 
+              href="https://www.rockymountainpower.net" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center flex-1 max-w-xs p-4 rounded-lg bg-(--color-overlay) hover:bg-opacity-80 transition-all hover:scale-105"
+            >
+              <img 
+                src="/rocky-mountain-power-logo.svg" 
+                alt="Rocky Mountain Power"
+                className="h-20 object-contain"
+              />
+            </a>
+            
+            {/* Provo International Airport */}
+            <a 
+              href="https://www.theprovo.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center flex-1 max-w-xs p-4 rounded-lg bg-(--color-overlay) hover:bg-opacity-80 transition-all hover:scale-105"
+            >
+              <img 
+                src="/provo-airport-logo.png" 
+                alt="Provo International Airport"
+                className="h-20 object-contain"
+              />
+            </a>
+            
+            {/* UVU COET */}
+            <a 
+              href="https://www.uvu.edu/engineering" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center flex-1 max-w-xs p-4 rounded-lg bg-(--color-overlay) hover:bg-opacity-80 transition-all hover:scale-105"
+            >
+              <img 
+                src="/uvu-coet-logo.png" 
+                alt="UVU College of Engineering and Technology"
+                className="h-20 object-contain"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Media Coverage */}
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8 border-l-4 border-l-(--color-gold)">
+        <h2 className="text-3xl font-bold mb-6 text-(--color-text) flex items-center gap-3"><FaBolt className="text-(--color-gold)" />Media Coverage</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* KSL News */}
+          <a 
+            href="https://www.youtube.com/watch?v=iNCepUkqGT0" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center p-6 bg-(--color-overlay) rounded-lg border border-(--color-overlay) hover:border-(--color-gold) hover:scale-95 transition-all duration-200 group"
+          >
+            <div className="h-20 w-32 rounded-lg flex items-center justify-center mb-4 group-hover:bg-(--color-gold) group-hover:bg-opacity-20 transition-colors">
+              <img 
+                src="/ksl-navy-logo.webp" 
+                alt="KSL News"
+                className="h-16 object-contain"
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-(--color-text) text-center mb-2">KSL News</h3>
+            <p className="text-sm text-(--color-subtle) text-center">Video coverage of the autonomous tug project</p>
+          </a>
+
+          {/* Deseret News */}
+          <a 
+            href="https://www.deseret.com/education/2024/04/12/uvu-airport-tug-invention-engineer-students-emissions/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center p-6 bg-(--color-overlay) rounded-lg border border-(--color-overlay) hover:border-(--color-gold) hover:scale-95 transition-all duration-200 group"
+          >
+            <div className="h-20 w-32 rounded-lg flex items-center justify-center mb-4 group-hover:bg-(--color-gold) group-hover:bg-opacity-20 transition-colors">
+              <img 
+                src="/deseret-news-simple-logo.png" 
+                alt="Deseret News"
+                className="h-16 object-contain"
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-(--color-text) text-center mb-2">Deseret News</h3>
+            <p className="text-sm text-(--color-subtle) text-center">Feature article on the project innovation</p>
+          </a>
+
+          {/* UVU Project Page */}
+          <a 
+            href="https://www.uvu.edu/news/2025/uvu-airplane-tug-2025.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center p-6 bg-(--color-overlay) rounded-lg border border-(--color-overlay) hover:border-(--color-gold) hover:scale-95 transition-all duration-200 group"
+          >
+            <div className="h-20 w-32 rounded-lg flex items-center justify-center mb-4 group-hover:bg-(--color-gold) group-hover:bg-opacity-20 transition-colors">
+              <img 
+                src="/uvu-simple-logo.svg.png" 
+                alt="UVU News"
+                className="h-16 object-contain"
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-(--color-text) text-center mb-2">UVU News</h3>
+            <p className="text-sm text-(--color-subtle) text-center">Official UVU project announcement</p>
+          </a>
+        </div>
       </div>
 
       {/* Project Overview */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8">
         <h2 className="text-3xl font-bold mb-4 text-(--color-text)">Project Overview</h2>
         <p className="text-lg text-(--color-subtle) mb-4 leading-relaxed">
           Designed and developed an autonomous electric tug vehicle system to handle material movement and towing operations at an international airport. The system combines industrial-grade hardware platforms (NVIDIA Jetson, Raspberry Pi) with custom control electronics (ESP32, Arduino, Pico) and specialized servo/motor drivers to achieve fully autonomous operation.
@@ -70,11 +190,11 @@ export function Capstone()
       </div>
 
       {/* Image Gallery */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8">
         <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Project Gallery</h2>
         <div className="space-y-4">
           {/* Image Display */}
-          <div className="relative bg-(--color-base) rounded-lg border border-(--color-overlay) overflow-hidden h-[50vh] flex items-center justify-center">
+          <div className="relative bg-(--color-surface) rounded-lg border border-(--color-overlay) overflow-hidden h-[50vh] flex items-center justify-center">
             <img
               src={projectImages[currentImageIndex].src}
               alt={projectImages[currentImageIndex].alt}
@@ -116,10 +236,10 @@ export function Capstone()
       </div>
 
       {/* Hardware Platform */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
-        <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Hardware Platform</h2>
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8 border-l-4 border-l-(--color-iris)">
+        <h2 className="text-3xl font-bold mb-6 text-(--color-text) flex items-center gap-3"><FaMicrochip className="text-(--color-iris)" />Hardware Platform</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Main Computing</h3>
             <ul className="text-sm text-(--color-subtle) space-y-1">
               <li>NVIDIA Jetson Xavier NX</li>
@@ -127,7 +247,7 @@ export function Capstone()
               <li>Advanced sensor fusion</li>
             </ul>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Control Microcontrollers</h3>
             <ul className="text-sm text-(--color-subtle) space-y-1">
               <li>ESP32 (wireless & WiFi)</li>
@@ -135,7 +255,7 @@ export function Capstone()
               <li>Raspberry Pi Pico (servo control)</li>
             </ul>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Actuators</h3>
             <ul className="text-sm text-(--color-subtle) space-y-1">
               <li>DC Motors with encoders</li>
@@ -144,7 +264,7 @@ export function Capstone()
               <li>Solenoid valves for hydraulics</li>
             </ul>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Sensors</h3>
             <ul className="text-sm text-(--color-subtle) space-y-1">
               <li>GPS/RTK positioning</li>
@@ -157,34 +277,34 @@ export function Capstone()
       </div>
 
       {/* Control Systems */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
-        <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Control Systems Architecture</h2>
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8 border-l-4 border-l-(--color-pine)">
+        <h2 className="text-3xl font-bold mb-6 text-(--color-text) flex items-center gap-3"><FaBolt className="text-(--color-pine)" />Control Systems Architecture</h2>
         <div className="space-y-4">
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Motor Control</h3>
             <p className="text-sm text-(--color-subtle)">
               Custom PWM driver circuits with feedback from encoder sensors. Closed-loop speed control ensures accurate trajectory following and load compensation.
             </p>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Navigation & Localization</h3>
             <p className="text-sm text-(--color-subtle)">
               Real-time GPS/RTK fusion with IMU data provides cm-level positioning accuracy. Autonomous pathfinding algorithms compute collision-free routes around airport obstacles.
             </p>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Safety Systems</h3>
             <p className="text-sm text-(--color-subtle)">
               Multi-layer safety architecture with emergency stop buttons, obstacle detection, geofencing, and watchdog timers. All safety-critical operations logged for compliance auditing.
             </p>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Power Management</h3>
             <p className="text-sm text-(--color-subtle)">
               Lithium battery packs with intelligent charging systems and real-time consumption monitoring. Autonomous return-to-base when battery threshold reached.
             </p>
           </div>
-          <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-4">
+          <div className="bg-(--color-overlay) rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-gold) mb-2">Software & Middleware</h3>
             <p className="text-sm text-(--color-subtle)">
               ROS2 Jazzy Jalisco provides the foundational robotics middleware for node communication, sensor data processing, and autonomous navigation algorithms across the heterogeneous hardware platforms.
@@ -194,8 +314,8 @@ export function Capstone()
       </div>
 
       {/* Key Capabilities */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
-        <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Key Capabilities</h2>
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8">
+        <h2 className="text-3xl font-bold mb-6 text-(--color-text)\">Key Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-linear-to-br from-(--color-iris)/20 to-(--color-gold)/20 rounded-lg border border-(--color-overlay) p-4">
             <h3 className="font-bold text-(--color-iris) mb-2">Full Autonomy</h3>
@@ -217,7 +337,7 @@ export function Capstone()
       </div>
 
       {/* Engineering Achievements */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8">
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8">
         <h2 className="text-3xl font-bold mb-6 text-(--color-text)">Engineering Achievements</h2>
         <ul className="space-y-3 text-(--color-subtle)">
           <li className="flex gap-3">
@@ -244,17 +364,17 @@ export function Capstone()
       </div>
 
       {/* Project Significance */}
-      <div className="bg-(--color-surface) rounded-lg border border-(--color-overlay) p-8 border-l-4 border-l-(--color-gold)">
-        <h2 className="text-3xl font-bold mb-4 text-(--color-text)">Project Significance</h2>
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8 border-l-4 border-l-(--color-rose)">
+        <h2 className="text-3xl font-bold mb-4 text-(--color-text) flex items-center gap-3"><FaGraduationCap className="text-(--color-rose)" />Project Significance</h2>
         <p className="text-lg text-(--color-subtle) leading-relaxed">
           This capstone represents the culmination of four years of engineering study, combining expertise in embedded systems, control theory, robotics, power electronics, and systems engineering. The project demonstrates the ability to take a complex real-world problem and deliver a production-ready solution in collaboration with industry partners. The work showcases practical skills in hardware integration, firmware development, systems debugging, and stakeholder communication that are directly applicable to professional engineering roles.
         </p>
       </div>
 
       {/* Stakeholder & Repository Notice */}
-      <div className="bg-(--color-base) rounded-lg border border-(--color-overlay) p-8 text-center">
+      <div className="relative rounded-2xl w-full border border-(--color-overlay)/60 bg-(--color-muted)/40 shadow-xl overflow-hidden backdrop-blur p-6 md:p-8 text-center">
         <p className="text-(--color-subtle) mb-3">
-          Developed in partnership with Rocky Mountain Power and Provo International Airport as part of Brigham Young University's Capstone Program.
+          Developed in partnership with Rocky Mountain Power and Provo International Airport as part of Utah Valley University's Capstone Program.
         </p>
         <p className="text-sm text-(--color-subtle) flex items-center justify-center gap-2">
           <FaLock className="text-(--color-gold)" />
