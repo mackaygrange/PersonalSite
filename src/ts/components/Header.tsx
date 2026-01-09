@@ -3,6 +3,10 @@ import { Tooltip } from 'react-tooltip';
 import { Link, useLocation } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 export function Header()
 {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,27 +113,27 @@ export function Header()
           {/* Right Group: Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {/* Link to Home Page */}
-            <Link to="/" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/')}`}>
+            <Link to="/" onClick={scrollToTop} className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/')}`}>
               Home
             </Link>
 
             {/* Link to About Page */}
-            <Link to="/about" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about')}`}>
+            <Link to="/about" onClick={scrollToTop} className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about')}`}>
               About
             </Link>
 
             {/* Link to Projects Page */}
-            <Link to="/projects" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects')}`}>
+            <Link to="/projects" onClick={scrollToTop} className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects')}`}>
               Projects
             </Link>
 
             {/* Link to Capstone Page */}
-            <Link to="/capstone" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone')}`}>
+            <Link to="/capstone" onClick={scrollToTop} className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone')}`}>
               Capstone
             </Link>
 
             {/* Link to Contact Page */}
-            <Link to="/contact" className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact')}`}>
+            <Link to="/contact" onClick={scrollToTop} className={`rounded-lg p-2 text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact')}`}>
               Contact
             </Link>
           </div>
@@ -166,7 +170,7 @@ export function Header()
             <Link
               to="/"
               className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
             >
               Home
             </Link>
@@ -175,7 +179,7 @@ export function Header()
             <Link
               to="/about"
               className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/about').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
             >
               About
             </Link>
@@ -184,7 +188,7 @@ export function Header()
             <Link
               to="/projects"
               className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/projects').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
 
             >
               Projects
@@ -194,8 +198,7 @@ export function Header()
             <Link
               to="/capstone"
               className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 font-semibold ${isActive('/capstone').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
-
+              onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
             >
               Capstone
             </Link>
@@ -204,7 +207,7 @@ export function Header()
             <Link
               to="/contact"
               className={`block rounded-lg py-1 text-(--color-text) hover:text-white hover:bg-(--color-highlight-med) transition-colors duration-800 ${isActive('/contact').includes('border') ? 'border-b-2 border-(--color-iris) text-white' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
             >
               Contact
             </Link>
