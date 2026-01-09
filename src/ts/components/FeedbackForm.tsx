@@ -14,7 +14,7 @@ export function FeedbackForm()
     const formData = new FormData(form);
     
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/mjgknnra', {
         method: 'POST',
         body: formData,
         headers: {

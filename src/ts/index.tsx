@@ -4,6 +4,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import '../css/tailwind.css';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { Capstone } from './pages/Capstone';
@@ -75,7 +76,12 @@ const router = createHashRouter([
 
 function App()
 {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <ScrollToTop />
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
