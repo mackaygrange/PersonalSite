@@ -87,8 +87,8 @@ export function Home()
                   {expandedDiploma === 'ba' && (
                     <div className="mt-4 border-t border-(--color-overlay)/40">
                       <iframe
-                        src="/MackayGrange_BA_eDiploma.pdf#toolbar=0&navpanes=0&scrollbar=0&messages=0&page=2&view=fitV"
-                        className="w-full h-64"
+                        src="/MackayGrange_BA_eDiploma.pdf#toolbar=0&navpanes=0&scrollbar=1&messages=0&page=2&view=fitV"
+                        className="w-full h-64 md:sm:h-80"
                         title="Bachelor of Science in Software Engineering eDiploma"
                       />
                     </div>
